@@ -2,15 +2,16 @@
 
 # Account class designed to change user balance
 class Account
-  attr_accessor :balance
+  attr_accessor :balance, :transactions
 
   def initialize
     @balance = 0
+    @transactions = []
   end
 
   def deposit(date, value)
     @balance += value
-    { 'date' => date.to_s, 'credit' => value, 'debit' => '', 'balance' => @balance }
+    @transactions.push({ 'date' => date.to_s, 'credit' => value, 'debit' => '', 'balance' => @balance })
   end
 
   def withdraw(date, value)
@@ -19,6 +20,11 @@ class Account
   end
 
   def statement
-    'Date      || Credit || Debit || Balance'
+    "Date      || Credit || Debit || Balance
+      #{transactions[0]['date']}"
+  end
+
+  def test
+    transactions[0]['date']
   end
 end
