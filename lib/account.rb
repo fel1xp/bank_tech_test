@@ -8,8 +8,9 @@ class Account
     @balance = 0
   end
 
-  def deposit(value)
+  def deposit(date, value)
     @balance += value
+    "#{date}, #{@balance}" 
   end
 
   def withdraw(value)
@@ -19,5 +20,5 @@ class Account
   def statement
     "Date      || Credit || Debit || Balance"
   end
-  
+
 end

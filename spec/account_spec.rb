@@ -12,9 +12,8 @@ describe Account do
   end
 
   describe '#deposit' do
-    it 'adds money to account' do
-      account.deposit(100)
-      expect(account.balance).to eq(100)
+    it 'adds money to account with date' do
+      expect(account.deposit("01/01/2021", 100)).to eq("01/01/2021, 100")
     end
   end
 
@@ -30,5 +29,5 @@ describe Account do
       expect(account.statement).to match("Date      || Credit || Debit || Balance")
     end
   end
-  
+
 end
