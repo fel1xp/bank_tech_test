@@ -29,7 +29,7 @@ describe Account do
     end
     it 'creates a hash with statement information' do
       expect(account.withdraw('01/01/2021',
-                              100)).to eq({ 'date' => '01/01/2021', 'credit' => '', 'debit' => 100, 'balance' => -100 })
+                              100)).to eq([{ 'date' => '01/01/2021', 'credit' => '', 'debit' => 100, 'balance' => -100 }])
     end
   end
 
@@ -39,10 +39,16 @@ describe Account do
       expect(account.statement).to start_with('Date      || Credit || Debit || Balance')
     end
 
-    it 'prints the date of a deposit' do
+    it 'prints all details from the #deposit hash' do
       account.deposit('01/01/2021', 100)
       expect(account.statement).to eq('Date      || Credit || Debit || Balance
       01/01/2021||100||||100')
+    end
+
+    it 'prints all details from the #withdraw hash' do
+      account.withdraw('01/01/2021', 100)
+      expect(account.statement).to eq('Date      || Credit || Debit || Balance
+      01/01/2021||||100||-100')
     end
   end
 end

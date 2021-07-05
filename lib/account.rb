@@ -16,7 +16,7 @@ class Account
 
   def withdraw(date, value)
     @balance -= value
-    { 'date' => date.to_s, 'credit' => '', 'debit' => value, 'balance' => @balance }
+    @transactions.push({ 'date' => date.to_s, 'credit' => '', 'debit' => value, 'balance' => @balance })
   end
 
   def statement
