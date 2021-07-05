@@ -15,4 +15,9 @@ class Account
   def withdraw(value)
     @balance -= value
   end
+
+  def statement
+    "Date      || Credit || Debit || Balance"
+  end
+  
 end

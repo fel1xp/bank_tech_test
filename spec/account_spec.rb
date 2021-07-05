@@ -24,4 +24,11 @@ describe Account do
       expect(account.balance).to eq(-100)
     end
   end
+
+  describe '#statement' do 
+    it 'prints a formatted account statement' do
+      expect(account.statement).to match("Date      || Credit || Debit || Balance")
+    end
+  end
+  
 end

@@ -11,7 +11,7 @@
 #### Input:
 account.deposit(03/07/2021, 1000)
 account.withdraw(05/07/2021, 200)
-account.print_statement
+account.statement
 
 #### Output:
 Date      || Credit || Debit || Balance
