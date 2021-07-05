@@ -10,7 +10,7 @@
 
 #### Input:
 account.deposit(03/07/2021, 1000)
-account.withdrawal(05/07/2021, 200)
+account.withdraw(05/07/2021, 200)
 account.print_statement
 
 #### Output:
