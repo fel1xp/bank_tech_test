@@ -19,8 +19,7 @@ describe Account do
 
   describe '#withdraw' do
     it 'withdraws money from account' do
-      account.withdraw(100)
-      expect(account.balance).to eq(-100)
+      expect(account.withdraw("01/01/2021",100)).to eq("01/01/2021, -100")
     end
   end
 
