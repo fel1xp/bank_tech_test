@@ -10,7 +10,7 @@ class Account
 
   def deposit(date, value)
     @balance += value
-    "#{date}, #{@balance}" 
+    {"date" => "#{date}", "credit" => value, "debit" => "", "balance" => @balance}
   end
 
   def withdraw(date, value)
