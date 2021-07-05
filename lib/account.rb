@@ -10,16 +10,15 @@ class Account
 
   def deposit(date, value)
     @balance += value
-    {"date" => "#{date}", "credit" => value, "debit" => "", "balance" => @balance}
+    { 'date' => date.to_s, 'credit' => value, 'debit' => '', 'balance' => @balance }
   end
 
   def withdraw(date, value)
     @balance -= value
-    {"date" => "#{date}", "credit" => "", "debit" => value, "balance" => @balance}
+    { 'date' => date.to_s, 'credit' => '', 'debit' => value, 'balance' => @balance }
   end
 
   def statement
-    "Date      || Credit || Debit || Balance"
+    'Date      || Credit || Debit || Balance'
   end
-
 end

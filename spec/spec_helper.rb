@@ -8,7 +8,6 @@ SimpleCov.start 'rails' do
   add_filter '/test/' # for minitest
 end
 
-
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

@@ -13,28 +13,29 @@ describe Account do
 
   describe '#deposit' do
     it 'adds money to account with date' do
-      account.deposit("01/01/2021", 100)
+      account.deposit('01/01/2021', 100)
       expect(account.balance).to eq(100)
     end
     it 'creates a hash with statement information' do
-      expect(account.deposit("01/01/2021", 100)).to eq({"date" => "01/01/2021", "credit" => 100, "debit" => "", "balance" => 100})
+      expect(account.deposit('01/01/2021',
+                             100)).to eq({ 'date' => '01/01/2021', 'credit' => 100, 'debit' => '', 'balance' => 100 })
     end
   end
 
   describe '#withdraw' do
     it 'withdraws money from account' do
-      account.withdraw("01/01/2021",100)
+      account.withdraw('01/01/2021', 100)
       expect(account.balance).to eq(-100)
     end
     it 'creates a hash with statement information' do
-      expect(account.withdraw("01/01/2021", 100)).to eq({"date" => "01/01/2021", "credit" => "", "debit" => 100, "balance" => -100})
+      expect(account.withdraw('01/01/2021',
+                              100)).to eq({ 'date' => '01/01/2021', 'credit' => '', 'debit' => 100, 'balance' => -100 })
     end
   end
 
-  describe '#statement' do 
+  describe '#statement' do
     it 'prints a formatted account statement' do
-      expect(account.statement).to eq("Date      || Credit || Debit || Balance")
+      expect(account.statement).to eq('Date      || Credit || Debit || Balance')
     end
   end
-
 end
