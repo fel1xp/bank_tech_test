@@ -23,7 +23,11 @@ describe Account do
 
   describe '#withdraw' do
     it 'withdraws money from account' do
-      expect(account.withdraw("01/01/2021",100)).to eq("01/01/2021, -100")
+      account.withdraw("01/01/2021",100)
+      expect(account.balance).to eq(-100)
+    end
+    it 'creates a hash with statement information' do
+      expect(account.withdraw("01/01/2021", 100)).to eq({"date" => "01/01/2021", "credit" => "", "debit" => 100, "balance" => -100})
     end
   end
 

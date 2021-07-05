@@ -15,7 +15,7 @@ class Account
 
   def withdraw(date, value)
     @balance -= value
-    "#{date}, #{@balance}"
+    {"date" => "#{date}", "credit" => "", "debit" => value, "balance" => @balance}
   end
 
   def statement
