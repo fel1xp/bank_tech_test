@@ -42,7 +42,7 @@ describe Account do
     it 'prints the date of a deposit' do
       account.deposit('01/01/2021', 100)
       expect(account.statement).to eq('Date      || Credit || Debit || Balance
-      01/01/2021')
+      01/01/2021||100||||100')
     end
   end
 end

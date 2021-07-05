@@ -21,7 +21,7 @@ class Account
 
   def statement
     "Date      || Credit || Debit || Balance
-      #{transactions[0]['date']}"
+      #{transactions[0]['date']}||#{transactions[0]['credit']}||#{transactions[0]['debit']}||#{transactions[0]['balance']}"
   end
 
   def test
