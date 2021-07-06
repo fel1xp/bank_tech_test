@@ -36,7 +36,6 @@ describe Account do
 
   describe '#statement' do
     it 'prints a formatted account statement' do
-      account.deposit('01/01/2021', 100)
       expect(account.statement).to start_with('Date      || Credit || Debit || Balance')
     end
 
