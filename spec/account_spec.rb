@@ -51,5 +51,13 @@ describe Account do
       expect(account.statement).to eq('Date      || Credit || Debit || Balance
       01/01/2021||||100||-100')
     end
+
+    it 'prints 2 transactions' do 
+      account.deposit('01/01/2021',100)
+      account.deposit('02/01/2021',100)
+      expect(account.statement).to eq('Date      || Credit || Debit || Balance
+      01/01/2021||100||||100
+      02/01/2021||100||||100')
+    end
   end
 end
