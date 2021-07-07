@@ -14,9 +14,10 @@ account.withdraw(05/07/2021, 200)
 account.statement
 
 #### Output:
-Date      || Credit || Debit || Balance
-03/07/2021|| 1000   ||       || 1000
-05/07/2021||        || 200   ||  800
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
 
 ### Get Started
 1. Clone this repo

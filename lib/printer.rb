@@ -1,15 +1,6 @@
 class Printer
-  def statement 
-    "Hello"
+  def header 
+    "date || credit || debit || balance"
   end
 end
 
-
-=begin 
-def statement
-    p "Date      || Credit || Debit || Balance"
-     @transactions.each do |transaction|
-      p "#{transaction['date']}||    #{transaction['credit']}||    #{transaction['debit']}|| #{transaction['balance']}"
-     end
-  end
-=end
