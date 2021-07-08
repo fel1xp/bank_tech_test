@@ -1,12 +1,16 @@
 # frozen_string_literal: true
 
 # Account class designed to change user balance
+
+require './lib/printer'
+
 class Account
   attr_accessor :balance, :transactions
 
-  def initialize
+  def initialize(printer = Printer.new )
     @balance = 0
     @transactions = []
+    @printer = printer 
   end
 
   def deposit(date, value)
@@ -18,5 +22,11 @@ class Account
     @balance -= value
     @transactions.push({ 'date' => date, 'credit' => '', 'debit' => value, 'balance' => @balance })
   end
+
+  def statement
+    @printer.header
+  end
+
+
 
 end
