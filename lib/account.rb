@@ -24,7 +24,7 @@ class Account
   end
 
   def statement
-    @printer.header
+    @printer.statement
   end
 
 

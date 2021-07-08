@@ -34,12 +34,5 @@ describe Account do
     end
   end
 
-  describe '#printer' do 
-    it 'creates a statement header' do
-      printer_double = @printer
-      expect(account.statement).to eq("date || credit || debit || balance")
-    end
-  end
-
 
 end
